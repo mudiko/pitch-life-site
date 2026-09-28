@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support &mdash; Pitch Life</title>
+<meta name="description" content="Support for the Pitch Life mobile game: how to report a bug, how saves work, and how to reach us.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0e1013;
+    --surface: #16191e;
+    --line: #262b33;
+    --text: #e6e8ec;
+    --muted: #9aa1ac;
+    --accent: #9fd18b;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0 20px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  }
+  main { max-width: 42rem; margin: 0 auto; }
+  header { padding: 56px 0 8px; border-bottom: 1px solid var(--line); }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.15rem; margin: 40px 0 10px; }
+  h3 { font-size: 1rem; margin: 26px 0 8px; }
+  p { margin: 0 0 16px; }
+  ul, ol { margin: 0 0 16px; padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  a { color: var(--accent); }
+  a:hover { color: #fff; }
+  code {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 5px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9em;
+  }
+  .meta { color: var(--muted); font-size: 0.9rem; margin: 12px 0 28px; }
+  .lede {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 0 0 8px;
+  }
+  .lede p:last-child { margin-bottom: 0; }
+  nav.crumbs { padding-top: 32px; font-size: 0.9rem; }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 0.875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+  <nav class="crumbs"><a href="index.html">&larr; Pitch Life</a></nav>
+
+  <header>
+    <h1>Support</h1>
+  </header>
+  <p class="meta">Pitch Life for iOS and Android &middot; Last updated 27 September 2026</p>
+
+  <div class="lede">
+    <p>One person reads this mailbox:
+    <a href="mailto:mert@maindtec.de">mert@maindtec.de</a>. Write in English or
+    Turkish. Expect a reply within a few days.</p>
+  </div>
+
+  <p>There is no support account to create and no ticket system. Email is the
+  whole thing.</p>
+
+  <h2>Reporting a bug</h2>
+
+  <p>The game is deterministic: the same career, the same week and the same
+  decisions produce the same match, every time, on every phone. That means a
+  well-described bug can usually be reproduced exactly &mdash; but only if the
+  report says where in the career it happened. Please include:</p>
+
+  <ol>
+    <li><strong>Your device and OS version</strong> &mdash; for example "Pixel 7,
+    Android 15" or "iPhone 13, iOS 18.4".</li>
+    <li><strong>The app version</strong>, from the store page for Pitch Life.</li>
+    <li><strong>Your player's full name and club</strong>, exactly as the game
+    spells them. Both are generated, so together they identify your career.</li>
+    <li><strong>The player's age and the season</strong>, and which screen you
+    were on: the match, full time, training, the transfer window, a story event,
+    the league table.</li>
+    <li><strong>What you tapped, what happened, and what you expected.</strong>
+    If it was a match decision, name the choice you picked.</li>
+    <li><strong>A screenshot or a screen recording.</strong> For anything visual
+    or anything mid-match, this is worth more than the other five points put
+    together.</li>
+  </ol>
+
+  <p>If the game crashed, say whether it crashed once or every time, and whether
+  it still crashes after force-quitting and reopening. There is no crash
+  reporting service in the app, so nothing about a crash reaches us unless you
+  tell us.</p>
+
+  <h2>Careers and save files</h2>
+
+  <p>Each career is a single JSON file inside the app's own private storage, in
+  a <code>saves</code> folder. The game writes to a temporary file and renames it
+  over the real one, and keeps the previous version alongside as
+  <code>.bak</code>, so a crash in the middle of a save leaves you with the last
+  good career rather than a broken one. Saves are written after every match and
+  after every major decision.</p>
+
+  <h3>Getting a career off the phone</h3>
+
+  <p>Settings shows <strong>Export career</strong> and <strong>Import
+  career</strong> buttons. <strong>In the current build they are placeholders and
+  do nothing when tapped.</strong> The code that produces the export exists and
+  is tested, but it is not yet connected to those buttons, so there is currently
+  no way to copy a career out of the game or move one to another phone yourself.</p>
+
+  <p>When they are connected, the flow will be: Settings &rarr; Export career
+  &rarr; the career is handed to your phone's share sheet as a JSON file, which
+  you can save or mail to yourself. Importing takes that same file back and
+  writes it into a career slot. Until then, please do not count on moving a
+  career between devices.</p>
+
+  <h3>If you lose a career</h3>
+
+  <p>There is no cloud save and no account, so we hold no copy and cannot
+  restore a career. The two things that protect a career are your phone's
+  backup, and not tapping through the overwrite warning:</p>
+
+  <ul>
+    <li>Saves live in the app's documents folder, which <em>is</em> included in
+    Android Auto Backup and in iOS device and iCloud backups. Reinstalling the
+    app on a phone with backup enabled normally brings the career back. Keep
+    backup switched on.</li>
+    <li><strong>New career</strong> on the title screen overwrites the career
+    already in that slot. The game names the career you are about to lose and
+    asks you to confirm. Once you confirm, it is gone.</li>
+  </ul>
+
+  <h2>Deleting everything</h2>
+
+  <p>Uninstall the app. That removes the save files and the index with it.
+  Nothing is stored on any server, because the game has no server. If you also
+  want the copy inside your phone's backup gone, clear it from your device's
+  backup settings.</p>
+
+  <h2>Things that are working as intended</h2>
+
+  <h3>Low energy never stops you playing</h3>
+
+  <p>Energy limits how hard you can train and it makes you play worse and pick up
+  injuries more easily, but it never locks a match behind a timer. If the
+  <strong>Play match</strong> button is there, you can play. It always is.</p>
+
+  <h3>The clubs and players are not real</h3>
+
+  <p>Every club, league, stadium, teammate and rival is invented by the game and
+  checked against a blocklist of real clubs and real people before it appears. If
+  a generated name still looks like a real club or a real person, that is a bug
+  &mdash; please report it and it will be added to the blocklist.</p>
+
+  <h3>The AI players around you are characters</h3>
+
+  <p>The rivals in the news and the award races are written by the game. They are
+  not other human players, and the game will never claim they are.</p>
+
+  <h3>You do not pick the team</h3>
+
+  <p>You control one footballer. You earn minutes or you sit on the bench, and
+  that is the game rather than a fault in it.</p>
+
+  <h2>Known limitations in the current build</h2>
+
+  <ul>
+    <li><strong>Export and import do nothing</strong> (see above).</li>
+    <li><strong>Settings are not remembered.</strong> The haptics switch, the
+    analytics switch and the matches-per-season slider reset when you leave the
+    screen.</li>
+    <li><strong>The language buttons in Settings do not change the
+    language.</strong> The game follows your device language: set your phone to
+    English or Turkish and Pitch Life will follow it.</li>
+    <li><strong>There is no in-game delete button for a single career.</strong>
+    Uninstalling, or starting a new career in that slot, is the way to remove
+    one.</li>
+  </ul>
+
+  <h2>Feature requests</h2>
+
+  <p>Welcome, and genuinely read. The most useful ones name the moment that felt
+  flat rather than the feature: "the match after I got dropped read exactly like
+  the one before it" is more actionable than a list.</p>
+
+  <h2>Contact</h2>
+
+  <p><a href="mailto:mert@maindtec.de">mert@maindtec.de</a></p>
+
+  <footer>
+    <p><a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of use</a></p>
+    <p>Pitch Life is made and published by maindtec.</p>
+  </footer>
+
+</main>
+</body>
+</html>
