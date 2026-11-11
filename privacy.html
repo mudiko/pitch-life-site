@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy &mdash; Pitch Life</title>
-<meta name="description" content="Privacy policy for the Pitch Life mobile game. The app collects nothing and sends nothing off the device.">
+<meta name="description" content="Privacy policy for the Pitch Life mobile game. No personal data; from version 1.0.3 a few anonymous gameplay statistics you can switch off.">
 <style>
   :root {
     color-scheme: dark;
@@ -70,35 +70,96 @@
   <header>
     <h1>Privacy policy</h1>
   </header>
-  <p class="meta">Pitch Life for iOS and Android &middot; Last updated 27 October 2026</p>
+  <p class="meta">Pitch Life for iOS and Android &middot; Last updated 11 November 2026 (anonymous statistics, error reports and &ldquo;Write to us&rdquo; from version 1.0.3)</p>
 
   <div class="lede">
-    <p><strong>Pitch Life does not collect any data about you.</strong> It has no
-    account system, no servers, and no code that sends anything anywhere. Your
-    career is saved as ordinary files on your own phone, and that is the only
-    place it exists.</p>
+    <p><strong>Pitch Life collects no personal data.</strong> It has no
+    accounts and no ads, it never asks who you are, and your career is saved
+    as ordinary files on your own phone. From version 1.0.3 it sends a few
+    anonymous gameplay statistics so we can see which parts of the game work,
+    and you can switch them off in the game&rsquo;s Settings. If you write to
+    us from the game, we receive your message. Versions up to 1.0.2 send
+    nothing at all.</p>
   </div>
 
   <h2>Who we are</h2>
 
   <p>Pitch Life is made and published by Vibalyze O&Uuml;, J&auml;rvevana tee 9,
-  11314 Tallinn, Estonia (registry code 17240903). Because the app collects no
-  personal data, we are not the controller of any personal data through it.
+  11314 Tallinn, Estonia (registry code 17240903). Vibalyze O&Uuml; is the
+  controller for the anonymous statistics and the messages described below.
   You can reach us at
   <a href="mailto:vibalyze@zohomail.eu">vibalyze@zohomail.eu</a>.</p>
 
-  <h2>What we collect</h2>
+  <h2>What the game sends (version 1.0.3 and later)</h2>
 
-  <p>Nothing. The app contains no analytics service, no advertising libraries,
-  no crash reporting service, no in-app purchase libraries and no social or
-  sign-in integrations. It does not ask for your name, your email address, your
-  contacts, your location, your photos, your microphone or your camera. It does
-  not read your advertising identifier or any other device identifier.</p>
+  <p><strong>Anonymous usage statistics.</strong> The game sends short
+  gameplay events to our own server, for example &ldquo;career
+  started&rdquo;, &ldquo;match played, rating 7.4, one goal&rdquo;,
+  &ldquo;moment played: shot, scored&rdquo;, &ldquo;training day&rdquo;,
+  &ldquo;story card answered&rdquo;, &ldquo;transfer accepted&rdquo; or
+  &ldquo;season ended in third place&rdquo;. Each event holds numbers and
+  fixed labels chosen by the game, plus the app version, the operating
+  system and its version, your phone&rsquo;s language and time zone offset,
+  and the country of the connection.</p>
 
-  <p>The app has no networking code at all. On Android it does not declare the
-  <code>INTERNET</code> permission. The system features it uses are the one
-  that tells it where its own private storage folder is, so it can write your
-  save file there, and the two described below.</p>
+  <ul>
+    <li>Events are tied only to a random install ID made on your phone (and a
+    random ID per session). It is not your name, not your Apple or Google
+    account, not a device identifier and not the advertising identifier. A
+    new random ID replaces it after 13 months.</li>
+    <li>The name you type for your player, your club&rsquo;s name and
+    anything else you type are never part of an event.</li>
+    <li>The server derives the country from the connection; it never stores
+    or logs your IP address.</li>
+    <li>Raw events are deleted after 120 days. Daily totals that hold no IDs
+    are kept for 25 months.</li>
+    <li>Offline, events wait on the phone (at most 1,000) and are sent later.
+    The game works fully without a connection.</li>
+    <li><strong>Turn it off</strong> any time: Settings &rarr; &ldquo;Share
+    anonymous analytics&rdquo;. Off deletes the events still waiting and
+    nothing more is sent.</li>
+  </ul>
+
+  <p><strong>Anonymous error reports.</strong> If the game hits a software
+  error, it sends an &ldquo;error&rdquo; event with the kind of error, a
+  short fingerprint, and the names of the game&rsquo;s own code files and
+  lines where it happened, so we can find and fix the bug. The error&rsquo;s
+  message is never sent (it could contain something you typed), and nor is
+  anything else from your phone. These reports go through the same anonymous
+  statistics, with the same install ID, retention and off switch.</p>
+
+  <p><strong>Where the install came from (iPhone only).</strong> On first
+  launch the game asks Apple&rsquo;s AdServices framework for a token and
+  sends it to our server once, so we can learn whether the install came from
+  an Apple Search Ads campaign (campaign, ad group and keyword, the country
+  and the date). This is Apple&rsquo;s privacy-preserving attribution: it
+  contains no advertising identifier and nothing about you, it is not
+  tracking, and the game shows no tracking prompt. If statistics are off,
+  nothing is sent.</p>
+
+  <p><strong>&ldquo;Write to us&rdquo;.</strong> If you send us a message
+  from the game&rsquo;s Settings, we receive the message, its type (bug, idea
+  or other), the app and system details above, the install ID (so we can
+  match a bug to what happened), and your email address only if you choose
+  to give one so we can reply. Messages are kept for 24 months. This works
+  even when statistics are off, because you send it on purpose.</p>
+
+  <p>Our server runs on Cloudflare, with the database in the European Union.
+  Cloudflare processes the data for us as a service provider. We do not sell
+  data, share it with advertisers or data brokers, or use it to track you
+  across other apps or websites.</p>
+
+  <h2>What we never collect</h2>
+
+  <p>No name, no contacts, no location, no photos, no microphone, no camera,
+  no advertising identifier and no device identifier. The app contains no
+  advertising libraries, no third-party analytics or crash reporting service,
+  no in-app purchase libraries and no social or sign-in integrations. On
+  Android, version 1.0.3 adds the <code>INTERNET</code> permission for the
+  statistics and &ldquo;Write to us&rdquo; above, and nothing else uses it.
+  The other system features the app uses are the one that tells it where its
+  own private storage folder is, so it can write your save file there, and
+  the two described below.</p>
 
   <h3>Match reminders</h3>
 
@@ -136,7 +197,10 @@
   their position, attributes, money, form and morale, the generated clubs and
   league they play in, which story events have already happened, and timestamps
   of when the save was written. All of it is generated by the game or typed by
-  you into the game. None of it is transmitted.</p>
+  you into the game. The save file is never transmitted.</p>
+
+  <p>Small files in the app&rsquo;s support folder hold the random install
+  ID, your statistics on/off choice and the events waiting to be sent.</p>
 
   <p>The game's content &mdash; commentary lines, story events, club and city
   names, the lifestyle catalogue &mdash; ships inside the app as bundled files.
@@ -158,7 +222,7 @@
   and no online leaderboard in this version. The rival players you read about in
   the game are characters the game invents; they are not other people and they
   are never presented as other people. The entire game works with the phone
-  offline.</p>
+  offline; the statistics simply wait until a connection is back.</p>
 
   <p>If online features are ever added, this page will be updated before they
   ship and the store listing's privacy answers will be redone to match.</p>
@@ -170,24 +234,23 @@
   and nothing to opt out of. There is a single in-game currency, which is earned
   by playing and cannot be bought.</p>
 
-  <h2>The analytics switch in Settings</h2>
+  <h2>The statistics switch in Settings</h2>
 
-  <p>Settings shows an <em>Analytics</em> switch. It is off by default and it is
-  never pre-ticked. In the current build it is not connected to anything &mdash;
-  there is no analytics system in the app for it to turn on, and the switch is
-  not even remembered between launches. It is in place so that the setting
-  exists before any measurement does.</p>
-
-  <p>If analytics are added later, they will stay opt-in and off by default,
-  they will be limited to anonymous counts of in-game actions with no identifier
-  that can be tied to a person, and this page will say exactly what is sent
-  before the feature ships.</p>
+  <p>Up to version 1.0.2, Settings showed an <em>Analytics</em> switch that was
+  off by default and not connected to anything, because the app had no
+  analytics. From version 1.0.3 the switch, &ldquo;Share anonymous
+  analytics&rdquo;, controls the anonymous statistics and error reports
+  described above. They hold no personal data and no identifier that can be
+  tied to a person, so they are on by default; switching them off is one tap,
+  stops all sending at once and deletes what was waiting.</p>
 
   <h2>Deleting your data</h2>
 
-  <p>Uninstalling Pitch Life deletes the app's documents folder, and with it
-  every save file and the index. There is nothing left on a server, because
-  there is no server.</p>
+  <p>Uninstalling Pitch Life deletes the app's documents and support folders,
+  and with them every save file, the index, the install ID and any events
+  still waiting to be sent. Turning statistics off stops all sending at once.
+  To have the statistics and messages from your install deleted from our
+  server, email us; we will help you find your install and erase it.</p>
 
   <p>Two things to know:</p>
 
@@ -210,25 +273,29 @@
   <p>Pitch Life is not directed at young children, but no part of that matters
   much here: the app collects no personal data from anyone, of any age. There
   are no ads, no purchases, no chat, no user profiles and no way for one player
-  to see another player's content. Nothing a child types into the game leaves
-  the device.</p>
+  to see another player's content. The anonymous statistics identify no one, and
+  nothing a child types into the game leaves the device unless they send it
+  through &ldquo;Write to us&rdquo;.</p>
 
-  <p>We do not knowingly collect personal information from children, because we
-  do not collect personal information at all. If you believe something in the
-  app contradicts this, please write to us at the address below and we will fix
-  it.</p>
+  <p>We do not knowingly collect personal information from children. If a child
+  sends us a message with an email address, a parent can ask us to delete it.
+  If you believe something in the app contradicts this page, please write to us
+  at the address below and we will fix it.</p>
 
   <h2>Your rights</h2>
 
-  <p>Data protection law gives you rights to access, correct, export and delete
-  personal data held about you. We hold none, so there is nothing for us to
-  hand over or erase. Your save file is yours, on your device, and you can read
-  it with any text editor.</p>
+  <p>If you are in the EU/EEA or UK, the GDPR gives you rights to access,
+  correct, export and delete personal data, to object to its use, and to
+  complain to a supervisory authority (in Estonia, the Andmekaitse
+  Inspektsioon). The statistics are anonymous and we cannot link them to you on
+  our own, but if you give us your install&rsquo;s details or the email you
+  wrote from, we will act on any request. Your save file is yours, on your
+  device, and you can read it with any text editor.</p>
 
   <h2>Changes to this policy</h2>
 
   <p>If the app starts doing something this page does not describe &mdash;
-  analytics, ads, purchases, cloud save &mdash; this page is updated first, with
+  ads, purchases, cloud save &mdash; this page is updated first, with
   a new date at the top, and the store privacy forms are updated with it. We
   will not quietly add collection under an old policy.</p>
 
