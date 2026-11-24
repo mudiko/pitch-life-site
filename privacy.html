@@ -70,12 +70,14 @@
   <header>
     <h1>Privacy policy</h1>
   </header>
-  <p class="meta">Pitch Life for iOS and Android &middot; Last updated 11 November 2026 (opt-in anonymous statistics, error reports and &ldquo;Write to us&rdquo; from version 1.0.3)</p>
+  <p class="meta">Pitch Life for iOS and Android &middot; Last updated 25 November 2026 (ads through Google AdMob from version 1.0.5; opt-in anonymous statistics, error reports and &ldquo;Write to us&rdquo; from version 1.0.3)</p>
 
   <div class="lede">
     <p><strong>Pitch Life collects no personal data.</strong> It has no
-    accounts and no ads, it never asks who you are, and your career is saved
-    as ordinary files on your own phone. From version 1.0.3 the game asks you
+    accounts, it never asks who you are, and your career is saved as ordinary
+    files on your own phone. From version 1.0.5 the game is kept free by ads
+    from Google AdMob; Google&rsquo;s part is described under
+    <a href="#ads">Advertising</a>. From version 1.0.3 the game asks you
     once, when you first start it, whether it may send a few anonymous
     gameplay statistics so we can see which parts of the game work. They are
     opt-in: nothing is sent unless you say yes, and you can change your answer
@@ -160,12 +162,15 @@
 
   <h2>What we never collect</h2>
 
-  <p>No name, no contacts, no location, no photos, no microphone, no camera,
-  no advertising identifier and no device identifier. The app contains no
-  advertising libraries, no third-party analytics or crash reporting service,
-  no in-app purchase libraries and no social or sign-in integrations. On
-  Android, version 1.0.3 adds the <code>INTERNET</code> permission for the
-  statistics and &ldquo;Write to us&rdquo; above, and nothing else uses it.
+  <p>We never collect your name, contacts, location, photos, microphone,
+  camera, advertising identifier or device identifier. The app contains no
+  third-party analytics or crash reporting service, no in-app purchase
+  libraries and no social or sign-in integrations. From version 1.0.5 it
+  contains one third-party library, Google&rsquo;s AdMob ad SDK; what Google
+  processes to show ads is described under <a href="#ads">Advertising</a>. On
+  Android, version 1.0.3 added the <code>INTERNET</code> permission for the
+  statistics and &ldquo;Write to us&rdquo; above; from 1.0.5 the ad SDK uses
+  it too, with the <code>AD_ID</code> permission.
   The other system features the app uses are the one that tells it where its
   own private storage folder is, so it can write your save file there, and
   the two described below.</p>
@@ -173,14 +178,17 @@
   <h3>Match reminders</h3>
 
   <p>If you choose to turn them on, the app can schedule one reminder on your
-  phone about your next match, at most once a day. It is off until you tap
-  &ldquo;Remind me&rdquo; or switch &ldquo;Match reminders&rdquo; on in
-  Settings, and only then does your phone ask for notification permission. The
+  phone about your next match (before your first contract: your trial), at
+  most once a day. It is off unless you allow notifications when your phone
+  asks, once, after the opening scene, or switch &ldquo;Match reminders&rdquo;
+  on in Settings. The
   reminder is a <em>local</em> notification: the app writes its text on your
   phone from your own career and hands it to your phone's operating system to
-  show later. There is no push service, no notification token, and nothing
-  about it is sent to us or anyone else. Turn it off any time in the game's
-  Settings or your phone's settings.</p>
+  show later. There is no push service and no notification token, and its
+  text and times never leave your phone. If you said yes to the statistics,
+  the game only counts that reminders were turned on or off, came due or
+  opened it. Turn it off any time in the game's Settings or your phone's
+  settings.</p>
 
   <h3>Store ratings</h3>
 
@@ -237,12 +245,50 @@
   <p>If online features are ever added, this page will be updated before they
   ship and the store listing's privacy answers will be redone to match.</p>
 
-  <h2>Advertising and purchases</h2>
+  <h2 id="ads">Advertising (Google AdMob, from version 1.0.5)</h2>
 
-  <p>The app currently contains no advertising and no in-app purchases. There is
-  no ad network in the build, so there is no ad profiling, no tracking prompt
-  and nothing to opt out of. There is a single in-game currency, which is earned
-  by playing and cannot be bought.</p>
+  <p>Pitch Life is free and paid for by ads. There are two kinds, and never
+  any before your first league match, during a match or during a minigame:</p>
+  <ul>
+    <li>Rewarded videos you choose to start yourself: watch one for a rest
+    day&rsquo;s energy without spending the day, or for your week&rsquo;s wage
+    again after a match. A few a day at most; skipping one costs nothing.</li>
+    <li>Full-screen ads at two breaks only: after you close a match report, and
+    after a season&rsquo;s review. Never in your first session, at most one
+    every 90 seconds.</li>
+  </ul>
+  <p>There are no banners. No ad can change a match result.</p>
+  <ul>
+    <li>In the EU/EEA, the UK and Switzerland (and in some US states),
+    Google&rsquo;s consent form appears before any ad is requested, and
+    Settings &rsaquo; Privacy choices lets you change your answer. Where that
+    form applies, your answer to it also decides the anonymous statistics, so
+    you are asked once.</li>
+    <li>On iPhone and iPad all ads are requested as non-personalized. Pitch
+    Life does not use App Tracking Transparency, so the advertising identifier
+    (IDFA) is not used. On Android, Google may use the Android advertising ID
+    to personalize ads where the law allows it and you have not opted out (in
+    the EU/UK only with your consent on Google&rsquo;s form); you can reset or
+    delete it in Android&rsquo;s settings.</li>
+    <li>To show ads, Google may process your IP address (for approximate
+    location), a device or advertising identifier, ad interactions, app
+    performance data and crash logs, for ad delivery, frequency capping,
+    measurement and fraud prevention. Google is an independent controller for
+    this; see <a href="https://policies.google.com/privacy">Google&rsquo;s
+    privacy policy</a> and
+    <a href="https://policies.google.com/technologies/partner-sites">how Google
+    uses data from partner apps</a>.</li>
+    <li>Ads are limited to content rated for teens and below.</li>
+    <li>We receive no per-user ad data from Google, only aggregate reports. Our
+    own anonymous statistics count which ad was offered and whether it was
+    watched, and the revenue Google reports for it, never an identifier.</li>
+  </ul>
+
+  <h2>Purchases</h2>
+
+  <p>The app contains no in-app purchases. There is a single in-game currency,
+  which is earned by playing (or by watching an optional ad) and cannot be
+  bought.</p>
 
   <h2>The statistics switch in Settings</h2>
 
@@ -283,8 +329,9 @@
 
   <p>Pitch Life is not directed at young children, but no part of that matters
   much here: the app collects no personal data from anyone, of any age. There
-  are no ads, no purchases, no chat, no user profiles and no way for one player
-  to see another player's content. The anonymous statistics identify no one, and
+  are no purchases, no chat, no user profiles and no way for one player to see
+  another player's content. Ads come from Google AdMob, limited to content
+  rated for teens and below (see <a href="#ads">Advertising</a>). The anonymous statistics identify no one, and
   nothing a child types into the game leaves the device unless they send it
   through &ldquo;Write to us&rdquo;.</p>
 
